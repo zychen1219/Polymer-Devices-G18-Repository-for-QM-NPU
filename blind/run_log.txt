@@ -1,0 +1,12 @@
+QXU6028 G18 blind run   2026-11-15T12:50:52
+python 3.12.14   Windows-11-10.0.26200-SP0
+data   data/raw/blind_G18
+commit UNCOMMITTED-LOCAL-RUN
+
+params c = 0.036146834  T = 300.0 K  E_F,op = 0.135338 eV  rho = 519.246 ohm/sq
+L1    0.15 s   C = 3.4478  n_F = 4.102e+11 cm^-2  mu_F = 29301.4 cm^2/Vs
+L2    4.80 s   model = gap  Eg = 3.00 kT (16-84% 3.00-3.00)  r_gap/r_cone = 0.126  gap fraction 1.000
+L3    0.44 s   eta = 1.00 eta0  FWHM = 1.74 pitch  delta95 = 2.57e-06  a = 0.0271  -> PASS (confident)
+fig   7.51 s   seven figures written to blind\figures
+checks  map finite: True (100 values)  group G18  dataset blind
+total 13.1 s

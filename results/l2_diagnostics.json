@@ -1,0 +1,19 @@
+{
+  "model": "gap",
+  "Eg_kT": 4.25,
+  "Eg_uncertainty_kT": [
+    4.25,
+    4.5
+  ],
+  "gap_fraction": 1.0,
+  "r_cone": 0.11161266567114733,
+  "r_gap": 0.01586634217486669,
+  "ratio": 0.14215539141063854,
+  "gamma": {
+    "gamma_model": 1.9791993976974271,
+    "gamma_data": 0.2526591429230889
+  },
+  "bootstrap_n": 200,
+  "seed": 20261115,
+  "neutral_index": 24
+}

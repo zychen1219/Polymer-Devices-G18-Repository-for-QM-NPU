@@ -41,8 +41,9 @@ per cent at a corner, the blind set carries a compact hot region at
 
 ## Note on `pipeline_commit`
 
-The repository did not exist when the blind run was made, so the run log records
-`UNCOMMITTED-LOCAL-RUN`. The pipeline is deterministic (fixed seeds `20261115`
-for the bootstrap and the noise floor), so the run is repeated after the first
-commit and the resulting hash replaces this file's value. Nothing else changes:
-the numbers above are reproduced exactly.
+The repository did not exist when the blind run was first made, so the initial
+log recorded `UNCOMMITTED-LOCAL-RUN`. The pipeline is deterministic (fixed seeds
+`20261115` for the bootstrap and the noise floor), so the run was repeated after
+the commits and the value was replaced with
+`2008bef947f8bbf792a317c3c180ab9d2e95b80f`. Nothing else changed: the numbers
+above are reproduced exactly.

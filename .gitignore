@@ -1,0 +1,21 @@
+# vendored wheels and the matplotlib font cache are local conveniences, not sources
+.deps/
+.mplconfig/
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# editors and os
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# scratch
+.tmp/
+*.log

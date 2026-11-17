@@ -42,8 +42,13 @@ def pipeline_commit() -> str:
                              capture_output=True, text=True, timeout=10)
         if top.returncode != 0:
             return "UNCOMMITTED-LOCAL-RUN"
-        if os.path.normcase(os.path.realpath(top.stdout.strip())) != \
-                os.path.normcase(os.path.realpath(HERE)):
+        # compare by filesystem identity: a string compare fails when the
+        # console hands git a differently encoded path (non-ASCII directories)
+        try:
+            same = os.path.samefile(top.stdout.strip(), HERE)
+        except OSError:
+            same = False
+        if not same:
             return "UNCOMMITTED-LOCAL-RUN"
         head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=HERE,
                               capture_output=True, text=True, timeout=10)

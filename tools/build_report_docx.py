@@ -135,9 +135,6 @@ def main():
             run.font.color.rgb = GREY
             continue
         if line.strip() == "---":
-            if not note_done:
-                _add_word_count(doc, text)
-                note_done = True
             par = doc.add_paragraph()
             par.paragraph_format.space_after = Pt(10)
             rule(par)
@@ -160,7 +157,7 @@ def main():
             par.paragraph_format.space_before = Pt(8)
             par.paragraph_format.space_after = Pt(3)
             par.paragraph_format.keep_with_next = True
-            par.add_run().add_picture(path, width=Cm(9.0))
+            par.add_run().add_picture(path, width=Cm(12.0))
             pending_caption = True
             continue
         if line.startswith("**Figure "):

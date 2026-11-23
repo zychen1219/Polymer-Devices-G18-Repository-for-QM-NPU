@@ -63,7 +63,7 @@ The written report is submitted through QMplus and is deliberately not stored he
 | L2 zero-dimensional inversion | done | hard gap, Eg = 4.25 kT (110 meV) |
 | L3 two-dimensional inversion | done | FAIL, a = 0.0324 against 0.030 |
 | blind test | done | PASS, a = 0.0271 against 0.030 |
-| report | done, submitted separately | 2287 words, 7 pages; the source and the PDF are not in this repository |
+| report | done, submitted separately | 2287 words, 9 pages; the source and the PDF are not in this repository |
 
 ## Results (L1)
 

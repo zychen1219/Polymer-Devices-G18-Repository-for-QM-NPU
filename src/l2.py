@@ -28,7 +28,7 @@ import os
 
 import numpy as np
 
-from common import E_CHARGE, KB_EV, N_A, trapz
+from common import style, E_CHARGE, KB_EV, N_A, trapz
 
 E_HALF = 2.5          # eV, symmetric DOS window
 N_E = 4000
@@ -247,6 +247,7 @@ def figures(root: str, res: dict, outdir: str) -> None:
     os.environ.setdefault("MPLCONFIGDIR",
                           os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".mplconfig"))
     matplotlib.use("Agg")
+    style()
     import matplotlib.pyplot as plt
 
     params = json.load(open(os.path.join(root, "L1_params.json"), encoding="utf-8"))

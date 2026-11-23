@@ -19,6 +19,8 @@ import os
 
 import numpy as np
 
+from common import style
+
 NPIX = 10
 N = NPIX * NPIX
 TAU = 0.030            # announced uniformity spec, 3.0 per cent of reference
@@ -374,6 +376,7 @@ def figures(root: str, res: dict, outdir: str) -> None:
     os.environ.setdefault("MPLCONFIGDIR",
                           os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".mplconfig"))
     matplotlib.use("Agg")
+    style()
     import matplotlib.pyplot as plt
 
     grid = np.asarray(res["map"]).reshape(NPIX, NPIX)

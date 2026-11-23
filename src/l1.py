@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from common import E_CHARGE, E_MAX, KB_EV, N_A, DEFAULT_T, fermi_dirac, grid, trapz
+from common import style, E_CHARGE, E_MAX, KB_EV, N_A, DEFAULT_T, fermi_dirac, grid, trapz
 
 _E = grid()
 _CACHE: dict[tuple, float] = {}
@@ -115,6 +115,7 @@ def figure(params: dict, out_png: str) -> None:
     os.environ.setdefault("MPLCONFIGDIR",
                           os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".mplconfig"))
     matplotlib.use("Agg")
+    style()
     import matplotlib.pyplot as plt
 
     c, T = params["c"], float(params["T"])

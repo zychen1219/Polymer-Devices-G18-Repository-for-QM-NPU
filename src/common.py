@@ -54,3 +54,22 @@ def assert_close(value, target, tol, label):
     print(f"  [{'PASS' if ok else 'FAIL'}] {label}: {value:.6g} vs {target:.6g} (tol {tol:g})")
     assert ok, f"{label} failed: {value} vs {target}"
     return ok
+
+
+def style() -> None:
+    """Print-legible defaults: the report embeds each figure near its native size."""
+    import matplotlib
+    matplotlib.use("Agg")
+    matplotlib.rcParams.update({
+        "font.size": 12,
+        "axes.titlesize": 12,
+        "axes.labelsize": 13,
+        "xtick.labelsize": 11,
+        "ytick.labelsize": 11,
+        "legend.fontsize": 10,
+        "axes.linewidth": 0.8,
+        "grid.alpha": 0.35,
+        "figure.dpi": 300,
+        "savefig.dpi": 300,
+        "savefig.bbox": "tight",
+    })
